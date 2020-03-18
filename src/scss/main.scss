@@ -17,7 +17,34 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    height: 500px;
-    width: 290px;
+    height: 400px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    .button {
+      background-color: rgba(114,181,113,0.5);
+      border: none;
+      margin: 2px;
+    }
+    &__result {
+      background: linear-gradient(to right, #b4e391 0%,#61c419 0%,#61c419 2%,#b4e391 100%);
+      grid-column: 1/5;
+      margin-bottom: 3px;
+      margin-left: 2px;
+      width: calc(100% - 4px);
+    }
+    &__equal {
+      grid-row: 5/7;
+    }
+    @media (orientation: landscape) and (max-height: 420px) {
+      height: 320px;
+      width: 200px;
+    }
+    @media (min-width: 1024px) {
+      height: 500px;
+      width: 290px;
+    }
   }
 }
