@@ -12,5 +12,12 @@ html {
 
 body {
   color: $yellow;
-  background: $violet;
+  background: $darkBlue;
+  .calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 500px;
+    width: 290px;
+  }
 }
