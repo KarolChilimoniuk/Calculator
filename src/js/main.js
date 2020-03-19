@@ -15,6 +15,11 @@ if ('serviceWorker' in navigator) {
 }
 
 // app code below
+const resultScreen = document.querySelector('.calculator__result--js');
+const buttons = [...document.querySelectorAll('.button--js')];
+const result = 0;
+
+console.log(buttons);
 
 console.log(`Hello world!`);
 
