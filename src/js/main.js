@@ -16,7 +16,6 @@ if ('serviceWorker' in navigator) {
 
 // app code below
 
-
 console.log(`Hello world!`);
 
 
