@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 @import "_normalize";
 @import "_variables";
 
 
 html {
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 *, *:before, *:after {
