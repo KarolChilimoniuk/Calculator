@@ -1,0 +1,42 @@
+{
+  "name": "Calculator - Karol Chilimoniuk",
+  "short_name": "Calculator",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/simple_calculator/",
+  "start_url": "/simple_calculator/",
+  "icons": [
+    {
+      "src": "assets/pwa/icons/calculator-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/pwa/icons/calculator-24x24.png",
+      "sizes": "24x24",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/pwa/icons/calculator-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/pwa/icons/calculator-64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/pwa/icons/calculator-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/pwa/icons/calculator-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
