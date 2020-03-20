@@ -28,17 +28,24 @@ body {
     .button {
       background-color: rgba(114,181,113,0.5);
       border: none;
+      color: $darkBlue;
+      font-weight: 500;
       margin: 2px;
+      text-transform: uppercase;
+      &__equal {
+        grid-row: 5/7;
+      }
     }
     &__result {
       background: linear-gradient(to right, #b4e391 0%,#61c419 0%,#61c419 2%,#b4e391 100%);
+      color: $darkBlue;
+      font-size: 1.5rem;
+      font-weight: 500;
       grid-column: 1/5;
       margin-bottom: 3px;
       margin-left: 2px;
+      padding: 10px;
       width: calc(100% - 4px);
-    }
-    &__equal {
-      grid-row: 5/7;
     }
     @media (orientation: landscape) and (max-height: 420px) {
       height: 320px;
