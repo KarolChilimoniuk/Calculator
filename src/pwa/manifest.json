@@ -5,8 +5,8 @@
   "background_color": "#000000",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/simple_calculator/",
-  "start_url": "/simple_calculator/",
+  "scope": "/Calculator/",
+  "start_url": "/Calculator/",
   "icons": [
     {
       "src": "assets/pwa/icons/calculator-16x16.png",
