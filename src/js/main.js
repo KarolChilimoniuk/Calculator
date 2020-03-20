@@ -16,19 +16,34 @@ if ('serviceWorker' in navigator) {
 
 // app code below
 
+
 class Calculator {
   constructor(operators, numbers) {
       this.operators = operators,
       this.numbers = numbers,
       this.result = 0
   }
-  getResult() {
-
+  getResult(operators, numbers, result) {
+     this.numbers.forEach(number => {
+       number.addEventListener('click', () => {
+        if(this.result == 0) {
+          this.result = number.textContent;
+        } else {
+          this.result = this.result + number.textContent;
+        }
+          resultScreen.textContent = this.result;
+          console.log(typeof(number.textContent));
+          console.log(this.result);
+       });
+     });
   }
 }
 
 const resultScreen = document.querySelector('.calculator__result--js');
 const calculator = new Calculator([...document.querySelectorAll('.button__action--js')], [...document.querySelectorAll('.button__number--js')]);
+resultScreen.textContent = calculator.result;
+
+calculator.getResult();
 console.log(calculator.operators);
 console.log(resultScreen)
 
