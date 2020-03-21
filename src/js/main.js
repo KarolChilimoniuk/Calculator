@@ -21,26 +21,24 @@ class Calculator {
   constructor(operators, numbers) {
       this.operators = operators,
       this.numbers = numbers,
-      this.result = 0
+      this.result = `0`
   }
   getResult(operators, numbers, result) {
      this.numbers.forEach(number => {
        number.addEventListener('click', () => {
-        if(this.result == 0) {
+        if(this.result === `0`) {
           this.result = number.textContent;
         } else {
           this.result = this.result + number.textContent;
         }
           resultScreen.textContent = this.result;
-          console.log(typeof(number.textContent));
-          console.log(this.result);
        });
      });
      this.operators.forEach(operator => {
        operator.addEventListener('click', () => {
         switch(operator.textContent) {
         case "ce":
-          this.result = 0;
+          this.result = `0`;
           break;
         case "+":
           this.result = this.result + "+";
@@ -49,8 +47,11 @@ class Calculator {
           this.result = this.result + "-";
           break;
         case "del":
-          if(this.result != 0) {
+          if(this.result !== `0`) {
             this.result = this.result.substring(0, this.result.length - 1)
+          } 
+          if(this.result === ``) {
+            this.result = `0`;
           }
           break;
         case "/":
@@ -63,7 +64,7 @@ class Calculator {
           this.result = this.result + ".";
           break;
       case "=":
-          this.result = eval(this.result);
+          this.result = `${eval(this.result)}`;
           break;
         }
         resultScreen.textContent = this.result;
