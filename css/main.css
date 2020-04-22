@@ -313,7 +313,9 @@ html {
           box-sizing: border-box;
   font-family: 'Montserrat', sans-serif; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
@@ -360,7 +362,12 @@ body {
       margin-bottom: 3px;
       margin-left: 2px;
       padding: 10px;
-      width: calc(100% - 4px); }
+      width: calc(100% - 4px);
+      max-width: calc(100% - 4px); }
+    body .calculator__paragraph-result {
+      max-width: 240px;
+      text-align: left;
+      word-break: break-all; }
     @media (orientation: landscape) and (max-height: 420px) {
       body .calculator {
         height: 320px;
