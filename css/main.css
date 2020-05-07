@@ -345,6 +345,9 @@ body {
       margin: 2px;
       text-transform: uppercase; }
       body .calculator .button__equal {
+        -ms-grid-column: 4;
+        -ms-grid-column-span: 1;
+        grid-column: 4/5;
         -ms-grid-row: 5;
         -ms-grid-row-span: 2;
         grid-row: 5/7; }
@@ -361,6 +364,7 @@ body {
       grid-column: 1/5;
       margin-bottom: 3px;
       margin-left: 2px;
+      max-height: 110px;
       padding: 10px;
       width: calc(100% - 4px);
       max-width: calc(100% - 4px); }
