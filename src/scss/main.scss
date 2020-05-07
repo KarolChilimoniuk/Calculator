@@ -38,6 +38,7 @@ body {
       text-transform: uppercase;
 
       &__equal {
+        grid-column: 4/5;
         grid-row: 5/7;
       }
     }
@@ -50,6 +51,7 @@ body {
       grid-column: 1/5;
       margin-bottom: 3px;
       margin-left: 2px;
+      max-height: 110px;
       padding: 10px;
       width: calc(100% - 4px);
       max-width: calc(100% - 4px);

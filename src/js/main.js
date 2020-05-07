@@ -1,6 +1,6 @@
 "use strict";
 
-// service worker registration - remove if you're not going to use it
+// service worker registration 
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
