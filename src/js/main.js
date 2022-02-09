@@ -23,53 +23,41 @@ if ("serviceWorker" in navigator) {
 // app code below
 
 // ---- create class for calculator
+
 class Calculator {
   constructor(operators, numbers) {
-    (this.operators = operators), (this.numbers = numbers), (this.result = `0`);
+    this.operators = operators;
+    this.numbers = numbers;
+    this.result = `0`;
   }
+
   getResult(operators, numbers, result) {
+
     this.numbers.forEach((number) => {
       number.addEventListener("click", () => {
-        if (this.result === `0`) {
-          this.result = number.textContent;
-        } else {
-          this.result = this.result + number.textContent;
-        }
+        this.result === `0` ? this.result = number.textContent : this.result = this.result + number.textContent;
         resultScreen.textContent = this.result;
       });
     });
+
     this.operators.forEach((operator) => {
+      const symbols = ["+", "-", "/", "*", "."];
+
       operator.addEventListener("click", () => {
-        switch (operator.textContent) {
-          case "ce":
-            this.result = `0`;
-            break;
-          case "+":
-            this.result = this.result + "+";
-            break;
-          case "-":
-            this.result = this.result + "-";
-            break;
-          case "del":
-            if (this.result !== `0`) {
-              this.result = this.result.substring(0, this.result.length - 1);
-            }
-            if (this.result === ``) {
-              this.result = `0`;
-            }
-            break;
-          case "/":
-            this.result = this.result + "/";
-            break;
-          case "*":
-            this.result = this.result + "*";
-            break;
-          case ".":
-            this.result = this.result + ".";
-            break;
-          case "=":
-            this.result = `${eval(this.result)}`;
-            break;
+
+        let splitResult = this.result.split("");
+        let text = operator.textContent;
+
+        if (text !== "=" && text !== "del" && text !== "ce") {
+          symbols.includes(splitResult[splitResult.length - 1]) === false ? this.result = this.result + text : null;
+        } else if (text === "ce") {
+          this.result = `0`;
+        } else if (text === "del") {
+          this.result !== `0` ? this.result = this.result.substring(0, this.result.length - 1) : null;
+          this.result === `` ? this.result = `0` : null;
+        } else if (text === "=") {
+          const dotValidator = splitResult.filter((el) => el === ".");
+          symbols.includes(splitResult[splitResult.length - 1]) === false && dotValidator.length < 2 ? this.result = `${eval(this.result)}` : null;
         }
         resultScreen.textContent = this.result;
       });
