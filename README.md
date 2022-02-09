@@ -19,7 +19,7 @@ This is my calculator app coded for fun and skills training.
 
 ### How does it looks? 👀
 
-[Link leads to online version](https://karolchilimoniuk.github.io/calculator)
+[Link leads to online version](https://karolchilimoniuk.github.io/Calculator/)
 ***
 
 ### How to launch the page? 🐱‍🏍
