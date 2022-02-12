@@ -12,6 +12,7 @@ This is my calculator app coded for fun and skills training.
 * JavaScript ES6
 * Node.js + NPM
 * Gulp
+* Webpack
 * Visual Studio Code
 * Canva
 
