@@ -2,7 +2,7 @@
 
 ### Introduction ⏩ 
 
-This is my calculator app coded for fun and skills training.
+This is my calculator app coded for fun and skills training. I use ES6 JS and PWA.
 ***
 
 ### Technologies and Tools 🏗
